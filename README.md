@@ -1,5 +1,8 @@
 # talkies
-Automate tooltip insertion in HTML. 
+
+Automates tooltip insertion in HTML. 
+//requires node.js
+
 To add tooltips to text on a html page, you add a span title to the text.
 sample:
 
