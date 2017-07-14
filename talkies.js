@@ -23,16 +23,16 @@ function talkies() {
         });
 
         process.stdin.pipe(split()).on('data', (text) => {
-            let irishWords = text.split(" ");
+            let originalWords = text.split(" ");
             let output = [];
 
-            irishWords.forEach( (irishWord)=>{
-                let englishWord = dict[irishWord];
-                if (englishWord) {
-                    let spanIt  = "<span title='"+englishWord + "'>"+ irishWord+ "</span>";
+            originalWords.forEach( (originalWord)=>{
+                let tipWord = dict[originalWord];
+                if (tipWord) {
+                    let spanIt  = "<span title='"+tipWord + "'>"+ originalWord+ "</span>";
                     output.push(spanIt);
                 } else {
-                    output.push(irishWord);
+                    output.push(originalWord);
                 }
             });
             let htmlString = output.join(" ");
